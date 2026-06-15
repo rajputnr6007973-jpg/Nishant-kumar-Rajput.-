@@ -1,0 +1,251 @@
+<DOCTYPE.html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width,initial-scale=1.0">
+<title> Future Earth 2100</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+body{
+background:linear-gradient(180deg,#050816,#0b1026,#111827);
+color:white;
+overflow-x:hidden;
+}
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:centre;
+align-items:centre;
+text-align:centre;
+padding:20px;
+}
+.hero h1{
+font-size:70px;
+text-shadow:0 0 20px cyan;
+animation:glow 2x infinite alternate;
+}
+.hero p{
+font-size:22px;
+margin-top:15px;
+color:.#d1d5db;
+}
+.btn{
+margin-top:30px;
+padding:15px 35px;
+background:transparent;
+border:2px solid cyan;
+color:white;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
+transition:3s;
+}
+.btn:hover{
+backgro:cyan;
+color:black;
+box-shadow:0 0 25px cyan;
+}
+section{
+padding:80px 10%;
+}
+.section-title{
+text-align:centre;
+font-size:40px;
+margin-bottom:40px;
+color:cyan;
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.15);
+transition:.4s;
+}
+.card:hover{
+transform:translateY(-10px)scale(1.05);
+box-shadow:0 0 25px cyan;
+}
+.card h3{
+margin-bottom:10px;
+color:cyan;
+}
+footer{
+text-align:centre;
+padding:40px;
+color:#aaa;
+}
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+overflow:hidden;
+}
+.star{
+position:absolute;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+animation:twinkle 4s infinite;
+}
+@keyframes twinkle{
+0%,100%{opacity:2;}
+50%{opacity:1;}
+}
+@keyframes glow{
+from{
+text-shadow:0 0 10px cyan;
+}
+to{
+text-shadow:0 0 35px cyan;
+}
+}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="hero">
+<h1>EARTH 2100</h1>
+<p>the future begins today</p>
+<button class="btn"
+onclick="document.getElementById('cities').scrollIntoView()">
+Explore
+</button>
+</div>
+<section id="cities">
+<h2 class="section-title">Future Cities</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Floating city</h3>
+<p>Advanced cities floating above oceans powered by clean energy.</p>
+</div>
+<div class="card">
+<h3>Underwater city</h3>
+<p>Human civilization living beneath the sea,</p>
+</div>
+<div class="card">
+<h3>Mars Colony</h3>
+<p> Permanent settlements on Mars connected to Earth</p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="section-title">Ai Life</h2>
+<div class="cards">
+<div class="card">
+<h3>Ai docters </h3>
+<p> Instant diagonosis and advanced treatments</p>
+</div>
+<div class="card">
+<h3> Ai Teachers</h3>
+<p> Personalized learning for every student.</p>
+</div>
+<div class="card">
+<h3> Ai Engineers</h3>
+<p>Designing future technologies automatically.</p>
+</div>
+</div>
+</section>
+<section> 
+<h2 class="section-title">Future Transport</h2>
+<div class="cards">
+<div class="card">
+<h3>Flying cars </h3>
+<p>Traffic-free transportation in smart cities.</p>
+</div>
+<div class="card">
+<h3> Hyperloop</h3>
+<p>Travel between cities in minutes.</p>
+</div>
+<div class="card">
+<h3>Space Tourism</h3>
+<p>Vacations beyond Earth.</p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="section-title"> Space Expansion</h2>
+<div class="cards">
+<div class="card">
+<h3>Moon Base</h3>
+<p>Permanent human presence on the Moon.</p>
+</div>
+<div class="card">
+<h3>Space Hotels</h3>
+<p>Luxury hotels orbiting Earth.</p>
+</div>
+<div class="card">
+<h3>Deep Space Missions</h3>
+<p>Exploring the outer planets and beyonds</p>
+</div>
+</div>
+</section>
+<footer>
+<h3>Designed by Nishant</h3>
+<p>Furture Earth 2100</p>
+</footer>
+<script>
+const stars=document.getElementById("stars");
+for(let i=0;i<200;i++){
+let star=document.createElement("div");
+star.classList.add("star");
+star.style.left=Math.random()*100+"%";
+star.style.top=Math.random()*100+"%";
+star.style.animationDelay=Math.random()*5+"s";
+stars.appendChild(star);
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
